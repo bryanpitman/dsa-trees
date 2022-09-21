@@ -1,62 +1,62 @@
-// const { BinaryTree, BinaryTreeNode } = require("./binary-tree");
+const { BinaryTree, BinaryTreeNode } = require("./binary-tree");
 
-// let smallTree;
-// let largeTree;
-// let emptyTree;
+let smallTree;
+let largeTree;
+let emptyTree;
 
-// beforeEach(function() {
-//   emptyTree = new BinaryTree();
+beforeEach(function() {
+  emptyTree = new BinaryTree();
 
-//   // build small tree
-//   //
-//   //            root
-//   //              |
-//   //              6
-//   //            /   \
-//   //           5     5
-//   //
+  // build small tree
+  //
+  //            root
+  //              |
+  //              6
+  //            /   \
+  //           5     5
+  //
 
-//   let smallLeft = new BinaryTreeNode(5);
-//   let smallRight = new BinaryTreeNode(5);
-//   let smallRoot = new BinaryTreeNode(6, smallLeft, smallRight);
-//   smallTree = new BinaryTree(smallRoot);
+  let smallLeft = new BinaryTreeNode(5);
+  let smallRight = new BinaryTreeNode(5);
+  let smallRoot = new BinaryTreeNode(6, smallLeft, smallRight);
+  smallTree = new BinaryTree(smallRoot);
 
-//   // build large tree
-//   //
-//   //                  root
-//   //                   |
-//   //                   6
-//   //                /     \
-//   //               5       5
-//   //                    /     \
-//   //                   3       1
-//   //                 /   \
-//   //                2     1
-//   //
+  // build large tree
+  //
+  //                  root
+  //                   |
+  //                   6
+  //                /     \
+  //               5       5
+  //                    /     \
+  //                   3       1
+  //                 /   \
+  //                2     1
+  //
 
-//   let node6 = new BinaryTreeNode(1);
-//   let node5 = new BinaryTreeNode(1);
-//   let node4 = new BinaryTreeNode(2);
-//   let node3 = new BinaryTreeNode(3, node4, node6);
-//   let node2 = new BinaryTreeNode(5, node3, node5);
-//   let node1 = new BinaryTreeNode(5);
-//   let root = new BinaryTreeNode(6, node1, node2);
-//   largeTree = new BinaryTree(root);
-// });
+  let node6 = new BinaryTreeNode(1);
+  let node5 = new BinaryTreeNode(1);
+  let node4 = new BinaryTreeNode(2);
+  let node3 = new BinaryTreeNode(3, node4, node6);
+  let node2 = new BinaryTreeNode(5, node3, node5);
+  let node1 = new BinaryTreeNode(5);
+  let root = new BinaryTreeNode(6, node1, node2);
+  largeTree = new BinaryTree(root);
+});
 
-// describe("minDepth", function() {
-//   it("handles simple trees", function() {
-//     expect(smallTree.minDepth()).toBe(2);
-//   });
+describe("minDepth", function() {
+  it("handles simple trees", function() {
+    expect(smallTree.minDepth()).toBe(2);
+  });
 
-//   it("handles more complex trees", function() {
-//     expect(largeTree.minDepth()).toBe(2);
-//   });
+  it("handles more complex trees", function() {
+    expect(largeTree.minDepth()).toBe(2);
+  });
 
-//   it("handles empty trees", function() {
-//     expect(emptyTree.minDepth()).toBe(0);
-//   });
-// });
+  it("handles empty trees", function() {
+    expect(emptyTree.minDepth()).toBe(0);
+  });
+});
 
 // describe("maxDepth", function() {
 //   it("handles simple trees", function() {
