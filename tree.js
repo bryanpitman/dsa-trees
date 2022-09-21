@@ -15,12 +15,40 @@ class Tree {
   /** sumValues(): add up all of the values in the tree. */
 
   sumValues() {
-    
+    let toSum = [this.root];
+    let sum = 0;
+
+    if (this.root === null) {
+      return sum;
+    }
+
+    while (toSum.length) {
+      let current = toSum.pop();
+
+      sum += current.val;
+      for (let child of current.children) toSum.push(child);
+    }
+    return sum;
   }
 
   /** countEvens(): count all of the nodes in the tree with even values. */
 
   countEvens() {
+
+      let toSum = [this.root];
+      let sum = 0;
+
+      if (this.root === null) {
+        return sum;
+      }
+
+      while (toSum.length) {
+        let current = toSum.pop();
+
+        if(current.val % 2 === 0) sum++;
+        for (let child of current.children) toSum.push(child);
+      }
+      return sum;
 
   }
 
@@ -29,6 +57,20 @@ class Tree {
 
   numGreater(lowerBound) {
 
+    let toSum = [this.root];
+    let sum = 0;
+
+    if (this.root === null) {
+      return sum;
+    }
+
+    while (toSum.length) {
+      let current = toSum.pop();
+
+      if(current.val > lowerBound) sum++;
+      for (let child of current.children) toSum.push(child);
+    }
+    return sum;
   }
 }
 
